@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/ltrainstg/prismadiagramR/branch/master/graph/badge.svg)](https://codecov.io/gh/ltrainstg/prismadiagramR?branch=master)
 <!-- badges: end -->
 
-The goal of prismadiagramR is to ...
+The goal of prismadiagramR is to create a custom prismadiagram in R. 
 
 ## Installation
 
@@ -43,23 +43,10 @@ devtools::install_github("ltrainstg/prismadiagramR")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
-library(prismadiagramR)
-## basic example code
-```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Other resources
+A few other R packages exsit that also make prisma diagram, but these either lack the flexibility or ease of use as this package. 
 
-```{r cars}
-summary(cars)
-```
+https://cran.r-project.org/web/packages/PRISMAstatement/vignettes/PRISMA.html
+https://rdrr.io/cran/metagear/man/plot_PRISMA.html
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!

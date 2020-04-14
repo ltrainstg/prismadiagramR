@@ -1,3 +1,4 @@
 
-a <- 10
-expect_equal(a, 10)
+test_that("str_length is number of characters", {
+  expect_equal(hello(), "hello")
+})
