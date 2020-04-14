@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.org/ltrainstg/prismadiagramR.svg?branch=master)](https://travis-ci.org/ltrainstg/prismadiagramR)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/ltrainstg/prismadiagramR?branch=master&svg=true)](https://ci.appveyor.com/project/ltrainstg/prismadiagramR)
 <!-- badges: end -->
 
 The goal of prismadiagramR is to …
