@@ -1,4 +1,4 @@
 
-test_that("str_length is number of characters", {
-  expect_equal(hello(), "hello")
+test_that("test print hello", {
+  getAutoPRISMA(prismaExampleInput)
 })

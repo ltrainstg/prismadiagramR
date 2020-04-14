@@ -39,6 +39,17 @@ devtools::install_github("ltrainstg/prismadiagramR")
 
 This is a basic example which shows you how to solve a common problem:
 
+``` r
+library(prismadiagramR)
+getAutoPRISMA(prismaExampleInput)
+```
+
+``` r
+getAutoPRISMA(prismaExampleInput)
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
 ## Other resources
 
 A few other R packages exsit that also make prisma diagram, but these
