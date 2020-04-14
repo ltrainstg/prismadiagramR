@@ -9,6 +9,12 @@
 status](https://travis-ci.org/ltrainstg/prismadiagramR.svg?branch=master)](https://travis-ci.org/ltrainstg/prismadiagramR)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/ltrainstg/prismadiagramR?branch=master&svg=true)](https://ci.appveyor.com/project/ltrainstg/prismadiagramR)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/prismadiagramR)](https://CRAN.R-project.org/package=prismadiagramR)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Codecov test
+coverage](https://codecov.io/gh/ltrainstg/prismadiagramR/branch/master/graph/badge.svg)](https://codecov.io/gh/ltrainstg/prismadiagramR?branch=master)
 <!-- badges: end -->
 
 The goal of prismadiagramR is to …
