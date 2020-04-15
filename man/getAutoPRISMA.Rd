@@ -9,9 +9,9 @@ getAutoPRISMA(prismaExampleInput, fontsize = 10, labelBuffer = 0)
 \arguments{
 \item{prismaExampleInput}{a dataframe with 1 row per item in the prima diagram.}
 
-\item{labelBuffer}{number of characters to create "buffer" around text}
+\item{fontsize}{how large to make the characters in the diagram}
 
-\item{fontsizehow}{large to make the characters in the diagram}
+\item{labelBuffer}{number of characters to create "buffer" around text}
 }
 \value{
 

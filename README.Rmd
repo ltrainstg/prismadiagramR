@@ -55,9 +55,16 @@ getAutoPRISMA(prismaExampleInput)
 getAutoPRISMA(prismaExampleInput)
 ```
 
-## Other resources
+## Other PRISMA resources
 A few other R packages exsit that also make prisma diagram, but these either lack the flexibility or ease of use as this package. 
 
 https://cran.r-project.org/web/packages/PRISMAstatement/vignettes/PRISMA.html
 https://rdrr.io/cran/metagear/man/plot_PRISMA.html
 
+
+## Package Development Resources
+This package was developed following these guides:
+
+  * John Muschelli's r package development 1 [HERE](https://www.youtube.com/watch?v=79s3z0gIuFU)
+  *   https://sahirbhatnagar.com/rpkg/#tests
+  

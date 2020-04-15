@@ -1,7 +1,7 @@
 #' Create Prisma
 #'
 #' @param prismaExampleInput a dataframe with 1 row per item in the prima diagram. 
-#' @param fontsizehow large to make the characters in the diagram
+#' @param fontsize how large to make the characters in the diagram
 #' @param labelBuffer number of characters to create "buffer" around text
 #'
 #' @return
@@ -10,6 +10,8 @@
 #' @import DiagrammeR
 #' @examples getAutoPRISMA(prismaExampleInput)
 getAutoPRISMA <- function(prismaExampleInput, fontsize = 10,  labelBuffer = 0) {
+  Source <- `Source Text` <- Filter <- `Filter Text` <- NULL
+  fontsize 
   
   SourceInfo.df <-
     prismaExampleInput %>%
