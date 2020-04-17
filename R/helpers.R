@@ -28,48 +28,53 @@ graph [splines=ortho, nodesep=1]
   return(dot_template)
 }
 getFormatNode<- function(prismaFormat){
-  
+  prismaLvl <- nodeType <- NodeName <- NULL
+  fontSize <- formatNode <- NULL
   if(!("fontSize" %in% names(prismaFormat))){
     warning("fontSize param not passed in prismaFormat")
     prismaFormat$fontSize <- 10
   }
   
   
-  prismaFormat %>%
+  formatLines <- prismaFormat %>%
     mutate(formatNode =
              sprintf("%s[fontsize=%s]",
                      NodeName, 
                      fontSize)) %>% 
-    pull(formatNode) %>% 
-    paste(., collapse = "\n")
+    pull(formatNode) 
+    paste(formatLines, collapse = "\n")
   
   
 }
 getLabelNode<- function(prismaFormat){
-  
-  prismaFormat %>%
+  prismaLvl <- nodeType <- NodeName <- NULL
+  prismaTxt <- labelNode <- NULL
+  labelLines <- prismaFormat %>%
     mutate(labelNode =
              sprintf("%s[label=\"%s\n\"]",
                      NodeName, 
                      prismaTxt)) %>% 
-    pull(labelNode) %>% 
-    paste(., collapse = "\n")
+    pull(labelNode) 
+    paste(labelLines, collapse = "\n")
   
   
 }
 getRankNode<- function(prismaFormat){
+  prismaLvl <- nodeType <- NodeName <- rankLabel <- NULL
   
-  prismaFormat%>% 
+ rankLines <-  prismaFormat%>% 
     group_by(prismaLvl) %>% 
     summarise(rankLabel = sprintf("{rank=same;%s}",
                                   paste(NodeName ,collapse = " "))) %>% 
-    pull(rankLabel) %>% 
-    paste(., collapse = "\n")
+    pull(rankLabel)  
+    paste( rankLines, collapse = "\n")
+  
+  
   
   
 }
 getConnectNode<- function(prismaFormat){
-
+prismaLvl <- nodeType <- NodeName <- NULL
   dot_template <- ""
   for(i in 1:(max(prismaFormat$prismaLvl)-1)){
     

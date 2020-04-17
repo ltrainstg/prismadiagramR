@@ -37,12 +37,8 @@ devtools::install_github("ltrainstg/prismadiagramR")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(prismadiagramR)
-getAutoPRISMA(prismaExampleInput)
-```
+This example shows how to create a simple automated PRISMA from a
+publication tracker.
 
 ``` r
 
@@ -52,23 +48,25 @@ studyStatus <- data.frame(Pub.ID = seq(1:N),
                           Source = sample(1:3, N, replace = TRUE),
                           Filter = sample(1:5, N, replace = TRUE))
 studyStatus$Filter[studyStatus$Filter==5] <- NA  
-
 getPrisma(studyStatus) %>% DiagrammeR::grViz(.)
 #> Warning in getPrisma(studyStatus): prismaFormat is null so attempting to
 #> make automatic one from studyStatus
-#> Warning in getFormatNode(studyStatus, prismaFormat): fontSize param not
-#> passed in prismaFormat
+#> Warning in getFormatNode(prismaFormat): fontSize param not passed in
+#> prismaFormat
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 ## Other PRISMA resources
 
-A few other R packages exsit that also make prisma diagram, but these
-either lack the flexibility or ease of use as this package.
+A few other R packages exist that also make PRISMA diagram that might be
+better for your needs.
 
-<https://cran.r-project.org/web/packages/PRISMAstatement/vignettes/PRISMA.html>
-<https://rdrr.io/cran/metagear/man/plot_PRISMA.html>
+1.  [prismaStatement](https://cran.r-project.org/web/packages/PRISMAstatement/vignettes/PRISMA.html)
+    This also uses DiagrammeR, but the template is fixed.
+2.  [metagear](https://rdrr.io/cran/metagear/man/plot_PRISMA.html) This
+    does not use DiagrammeR and is highly customizable, but is buried
+    with many other functions and a little hard to get working.
 
 ## Package Development Resources
 

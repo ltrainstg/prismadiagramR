@@ -13,6 +13,7 @@
 #' DiagrammeR::grViz(prismaTemplate)
 #' @export
 getPrismaFormat <- function(studyStatus){
+  Source<-prismaTxt <- N <- NULL
   Source.df <- studyStatus %>% 
     group_by(Source) %>% 
     summarise(prismaLvl = 1, 
