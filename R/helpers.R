@@ -1,13 +1,13 @@
-createPrisma <-  function(studyStatus, prismaFormat){
+createPrisma <-  function(prismaFormat){
   prismaFormat$NodeName <- paste0(prismaFormat$nodeType, seq_along(prismaFormat$nodeType))
   # initialize
-  formatNode <- getFormatNode(studyStatus, prismaFormat)
+  formatNode <- getFormatNode( prismaFormat)
   # Add Source
-  labelNode <- getLabelNode(studyStatus, prismaFormat)
+  labelNode <- getLabelNode( prismaFormat)
   # Add Middle 
-  rankNode <- getRankNode(studyStatus, prismaFormat)
+  rankNode <- getRankNode( prismaFormat)
   # Add End
-  connectNode <- getConnectNode(studyStatus, prismaFormat)
+  connectNode <- getConnectNode( prismaFormat)
   
   dot_template <-
     sprintf(
@@ -27,7 +27,7 @@ graph [splines=ortho, nodesep=1]
   
   return(dot_template)
 }
-getFormatNode<- function(studyStatus, prismaFormat){
+getFormatNode<- function(prismaFormat){
   
   if(!("fontSize" %in% names(prismaFormat))){
     warning("fontSize param not passed in prismaFormat")
@@ -45,7 +45,7 @@ getFormatNode<- function(studyStatus, prismaFormat){
   
   
 }
-getLabelNode<- function(studyStatus, prismaFormat){
+getLabelNode<- function(prismaFormat){
   
   prismaFormat %>%
     mutate(labelNode =
@@ -57,7 +57,7 @@ getLabelNode<- function(studyStatus, prismaFormat){
   
   
 }
-getRankNode<- function(studyStatus, prismaFormat){
+getRankNode<- function(prismaFormat){
   
   prismaFormat%>% 
     group_by(prismaLvl) %>% 
@@ -68,7 +68,7 @@ getRankNode<- function(studyStatus, prismaFormat){
   
   
 }
-getConnectNode<- function(studyStatus, prismaFormat){
+getConnectNode<- function(prismaFormat){
 
   dot_template <- ""
   for(i in 1:(max(prismaFormat$prismaLvl)-1)){

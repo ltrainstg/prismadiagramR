@@ -12,18 +12,106 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>", 
+  dpi = 200, 
+  warning = FALSE
 )
+library(prismadiagramR)
+library(dplyr)
 ```
 
 ```{r setup}
 library(prismadiagramR)
+library(dplyr)
+```
+
+
+
+# Purpose
+This package aids in rapidly creating a PRISMA diagram for use in meta-analysis from a simple dataframe tracking the use of publications in the analysis.
+
+The minimal arguments needed are:
+    1. Pub.ID: A unique publication ID.
+    2. Source: A source identifier to describe where the study is from.
+    3. Filter: A Filter identifier to describe how the study is filtered out or left NA if used.
+
+
+# Simple StudySet input
+From a dataframe with onlt the three arguments stated above we can get an initial PRISMA diagram.
+
+```{r}
+
+set.seed(25)
+N <- 100
+studyStatus <- data.frame(Pub.ID = seq(1:N),
+                          Source = sample(letters[1:3], N, replace = TRUE),
+                          Filter = sample(letters[1:5], N, replace = TRUE))
+studyStatus$Filter[studyStatus$Filter=="e"] <- NA
+getPrisma(studyStatus) %>% DiagrammeR::grViz(.)
+
+```
+
+
+## Switching Source
+It is possible to re-order the sources and filters.
+
+```{r}
+studyStatus$Source <- ordered(studyStatus$Source , levels = c("c", "b", "a"))
+studyStatus$Filter <- ordered(studyStatus$Filter , levels = c("d", "c", "b", "a"))
+
+getPrisma(studyStatus) %>% DiagrammeR::grViz(.)
 ```
 
 
 
 
-# Examples
+
+# Addtional Formatting
+We can also obtain a custom prismaFormat dataframe to modify to change items in the PRISMA as desired.
+By default this dataframe has 3 arguments:
+    1. prismaLvl: This describes the level the node is created at.
+    2. nodeType: This descibes the type of node it is.
+    3. prismaTxt: The text used in the node for the PRISMA diagram.
+
+```{r}
+prismaFormat <- getPrismaFormat(studyStatus)
+flextable::flextable(prismaFormat)
+
+```
+
+
+## Changing Text
+
+```{r}
+prismaFormat$prismaTxt[1] <- "Medline"
+getPrisma(studyStatus = NULL, prismaFormat = prismaFormat) %>% DiagrammeR::grViz(.)
+
+```
+
+## Changing FonstSize
+We can add the fontSize argument to the datatable to cusomize the fontsize in each node.
+
+```{r}
+prismaFormat$fontSize <- 15
+prismaFormat$fontSize[1] <- 10
+getPrisma(studyStatus = NULL, prismaFormat = prismaFormat) %>% DiagrammeR::grViz(.)
+```
+
+
+## From Scratch
+It is also possible to create the PRISMA directly from prismaFormat and create nodes that do not need a filter. 
+ 
+```{r}
+prismaFormat <-
+  data.frame(
+    prismaLvl = c(1,2,3,3,4),
+    nodeType =  c("Source", "Node", "Node", "Filter", "End"),
+    prismaTxt = letters[1:5]
+  )
+
+getPrisma(studyStatus = NULL, prismaFormat = prismaFormat) %>% DiagrammeR::grViz(.)
+```
+
 
 
 

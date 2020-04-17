@@ -6,7 +6,7 @@
 These functions create a PRISMA diagram from a simple dataframe keeping track of sources and filters
 It creates a DiagrammeR file run by grV}
 \usage{
-getPrisma(studyStatus, prismaFormat = NULL)
+getPrisma(studyStatus = NULL, prismaFormat = NULL)
 }
 \arguments{
 \item{studyStatus}{a dataframe that keeps track of}

@@ -13,14 +13,14 @@
 #' prismaTemplate <- getPrisma(studyStatus, prismaFormat)
 #' DiagrammeR::grViz(prismaTemplate)
 #' @export
-getPrisma <- function(studyStatus, prismaFormat = NULL){
+getPrisma <- function(studyStatus =NULL, prismaFormat = NULL){
   
-  reqNames <- c("Source", "Filter")
-  missNames <- setdiff(reqNames, names(studyStatus))
-  if(length(missNames) != 0 ) stop(sprintf("%s not in studyStatus argument.",  paste(missNames, collapse = " and ")))
+
   
   if(is.null(prismaFormat)){
-    
+    reqNames <- c("Source", "Filter")
+    missNames <- setdiff(reqNames, names(studyStatus))
+    if(length(missNames) != 0 ) stop(sprintf("%s not in studyStatus argument.",  paste(missNames, collapse = " and ")))
     warning("prismaFormat is null so attempting to make automatic one from studyStatus")
     prismaFormat <- getPrismaFormat(studyStatus)
     
@@ -29,7 +29,7 @@ getPrisma <- function(studyStatus, prismaFormat = NULL){
   reqNames <- c("Source", "Node","Filter", "End")
   if(!all(prismaFormat$nodeType %in% reqNames) ) stop("Check nodeType some of these not allowed")
   
-  createPrisma(studyStatus, prismaFormat)
+  createPrisma(prismaFormat)
   
   
   

@@ -15,7 +15,8 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    covr
+    covr,
+    flextable
 RoxygenNote: 7.1.0
 VignetteBuilder: knitr
 Imports: 
