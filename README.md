@@ -45,7 +45,19 @@ getAutoPRISMA(prismaExampleInput)
 ```
 
 ``` r
-getAutoPRISMA(prismaExampleInput)
+
+set.seed(25)
+N <- 100
+studyStatus <- data.frame(Pub.ID = seq(1:N), 
+                          Source = sample(1:3, N, replace = TRUE),
+                          Filter = sample(1:5, N, replace = TRUE))
+studyStatus$Filter[studyStatus$Filter==5] <- NA  
+
+getPrisma(studyStatus) %>% DiagrammeR::grViz(.)
+#> Warning in getPrisma(studyStatus): prismaFormat is null so attempting to
+#> make automatic one from studyStatus
+#> Warning in getFormatNode(studyStatus, prismaFormat): fontSize param not
+#> passed in prismaFormat
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />

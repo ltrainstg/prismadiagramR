@@ -1,5 +1,7 @@
 ---
-title: "PRISMA"
+title: "Customize a PRISMA flow chart"
+author: Lionel Duarte
+date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PRISMA}
@@ -19,6 +21,11 @@ library(prismadiagramR)
 ```
 
 
-```{r}
-getAutoPRISMA(prismaExampleInput)
-```
+
+
+# Examples
+
+
+
+
+

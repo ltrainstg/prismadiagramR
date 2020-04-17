@@ -4,9 +4,8 @@
 #'
 #' @format A data frame with 10 rows and 4 variables:
 #' \describe{
-#'   \item{Source}{Source label to be sorted}
-#'   \item{Source Text}{Source text used}
-#'   \item{Filter}{Filter label used to be sorted}
-#'   \item{Filter Text}{Filter text use to be shown on the side}
+#'   \item{Pub.ID}{Pubblication unique identifier}
+#'   \item{Source}{Source identifier}
+#'   \item{Filter}{Filter identifier}
 #' }
-"prismaExampleInput"
+"studyStatus"
