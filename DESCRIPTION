@@ -1,5 +1,5 @@
 Package: prismadiagramR
-Title: Creates a prisma diagram using DiagrammeR
+Title: Creates a Prisma Diagram using DiagrammeR
 Version: 1.0.0
 Authors@R: 
     person(given = "Lionel",

@@ -4,12 +4,12 @@
 \name{prismadiagramR-package}
 \alias{prismadiagramR}
 \alias{prismadiagramR-package}
-\title{prismadiagramR: Creates a prisma diagram using DiagrammeR}
+\title{prismadiagramR: Creates a Prisma Diagram using DiagrammeR}
 \description{
 What the package does (one paragraph).
 }
 \author{
-\strong{Maintainer}: Lionel Duarte \email{lduarte@doctorevidence.com} (\href{https://orcid.org/0000-0003-0296-4949}{ORCID})
+\strong{Maintainer}: Lionel Duarte \email{lduarte85718@gmail.com} (\href{https://orcid.org/0000-0003-0296-4949}{ORCID})
 
 }
 \keyword{internal}
