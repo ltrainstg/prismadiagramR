@@ -37,7 +37,7 @@ The minimal arguments needed are:
 
 
 # Simple StudySet input
-From a dataframe with onlt the three arguments stated above we can get an initial PRISMA diagram.
+From a dataframe with only the three arguments stated above we can get an initial PRISMA diagram.
 
 ```{r}
 
@@ -66,11 +66,11 @@ getPrisma(studyStatus) %>% DiagrammeR::grViz(.)
 
 
 
-# Addtional Formatting
+# Additional Formatting
 We can also obtain a custom prismaFormat dataframe to modify to change items in the PRISMA as desired.
 By default this dataframe has 3 arguments:
     1. prismaLvl: This describes the level the node is created at.
-    2. nodeType: This descibes the type of node it is.
+    2. nodeType: This describes the type of node it is.
     3. prismaTxt: The text used in the node for the PRISMA diagram.
 
 ```{r}
@@ -89,7 +89,7 @@ getPrisma(studyStatus = NULL, prismaFormat = prismaFormat) %>% DiagrammeR::grViz
 ```
 
 ## Changing FonstSize
-We can add the fontSize argument to the datatable to cusomize the fontsize in each node.
+We can add the fontSize argument to the datatable to customize the fontsize in each node.
 
 ```{r}
 prismaFormat$fontSize <- 15
