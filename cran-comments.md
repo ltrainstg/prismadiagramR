@@ -13,3 +13,8 @@
 This is a resubmission. In this version I have:
 
 * Converted the DESCRIPTION from default placeholder to an actual description. 
+
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Changed the non-canonical CRAN url to canonical form. 

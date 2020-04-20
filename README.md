@@ -62,7 +62,7 @@ getPrisma(studyStatus) %>% DiagrammeR::grViz(.)
 A few other R packages exist that also make PRISMA diagram that might be
 better for your needs.
 
-1.  [prismaStatement](https://cran.r-project.org/web/packages/PRISMAstatement/vignettes/PRISMA.html)
+1.  [prismaStatement](https://CRAN.R-project.org/package=PRISMAstatement)
     This also uses DiagrammeR, but the template is fixed.
 2.  [metagear](https://rdrr.io/cran/metagear/man/plot_PRISMA.html) This
     does not use DiagrammeR and is highly customizable, but is buried
