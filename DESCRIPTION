@@ -7,9 +7,10 @@ Authors@R:
            role = c("aut", "cre"),
            email = "lduarte85718@gmail.com",
            comment = c(ORCID = "0000-0003-0296-4949"))
-Description: This package allows for creating easy and cusomizable PRISMA diagrams using DiagrammeR.
+Description: Creates PRISMA <http://prisma-statement.org/> diagram from a minimal dataset of included and excluded studies and allows for more custom diagrams. PRISMA diagrams are used to track the identification, screening, eligibility, and inclusion of studies in a systematic review. 
 License: MIT + file LICENSE
 URL: https://github.com/ltrainstg/prismadiagramR
+BugReports: https://github.com/ltrainstg/prismadiagramR/issues
 Encoding: UTF-8
 LazyData: true
 Suggests: 
