@@ -6,7 +6,15 @@
 \alias{prismadiagramR-package}
 \title{prismadiagramR: Creates a Prisma Diagram using DiagrammeR}
 \description{
-What the package does (one paragraph).
+Creates PRISMA <http://prisma-statement.org/> diagram from a minimal dataset of included and excluded studies and allows for more custom diagrams. PRISMA diagrams are used to track the identification, screening, eligibility, and inclusion of studies in a systematic review.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/ltrainstg/prismadiagramR}
+  \item Report bugs at \url{https://github.com/ltrainstg/prismadiagramR/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Lionel Duarte \email{lduarte85718@gmail.com} (\href{https://orcid.org/0000-0003-0296-4949}{ORCID})
