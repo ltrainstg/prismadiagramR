@@ -4,5 +4,5 @@ hello <- function(){
 
 
 bye <- function(){
-  print('HI')
+  print('BYE')
 }
